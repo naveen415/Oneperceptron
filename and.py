@@ -11,14 +11,14 @@ def main(data, eta, epochs,filename,plotname):
 
     X,y = prepare_data(df)
 
-    model_AND = Perceptron(eta, epochs)
-    model_AND.fit(X, y)
+    model = Perceptron(eta, epochs)
+    model.fit(X, y)
 
-    _ = model_AND.total_loss()
+    _ = model.total_loss()
 
-    save_model(model_AND,filename)
+    save_model(model,filename)
 
-    save_plot(df,plotname,model_AND)
+    save_plot(df,plotname,model)
 
 if __name__ == '__main__':
     AND = {
